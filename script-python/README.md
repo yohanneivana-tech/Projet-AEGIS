@@ -90,7 +90,7 @@ Traçabilité : Conservation et protection des logs d'accès pour répondre à l
 
 Analyse des Menaces : Réduction de la probabilité des risques de force brute (de "Haute" à "Faible") grâce au couplage Port Custom + Fail2ban.
 
- Équipe de Projet
+ Équipe De Projet
 
 Yaya : Administrateur Système & Sécurité (Déploiement VM, Hardening SSH, Script Python).
 
