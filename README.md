@@ -1,4 +1,4 @@
-# Projet AEGIS
+Projet AEGIS
 Projet AEGIS - Sécurisation de l'Infrastructure TechSud
 
 Ce projet a été réalisé dans le cadre de l'unité d'enseignement Sécurité des Systèmes d'Information (SSI) au sein de l'école IPSSI (Promotion BTC1 - 2026).
@@ -9,7 +9,7 @@ Présentation du Projet
 
 À la suite d'une compromission majeure du système d'information de TechSud, notre équipe a été mandatée pour :
 
-Auditer l'existant : Identifier les Vecteurs d'attaque Utilisés.
+Auditer l'existant : Identifier les Vecteurs d'attaque utilisés.
 
 Sécuriser l'hôte : Appliquer des mesures de durcissement (Hardening) sur une VM Linux.
 
@@ -33,8 +33,7 @@ Gestion de version : Git & GitHub
 
 Mesures de Sécurisation Déployées
 
-1. Durcissement du service SSH (SSH Hardening)
-
+Durcissement du service SSH (SSH Hardening)
 Le service SSH étant la porte d'entrée principale, nous avons appliqué les mesures suivantes :
 
 Port non-standard : Migration du port 22 vers le port 2222 pour limiter les scans automatiques et les attaques par force brute.
@@ -43,8 +42,7 @@ Désactivation du compte Root : Configuration de PermitRootLogin no pour forcer 
 
 Authentification par Clés : Abandon des mots de passe au profit de clés asymétriques Ed25519 (plus sécurisées et performantes).
 
-2. Configuration du Pare-feu (UFW)
-
+Configuration du Pare-feu (UFW)
 Mise en place d'une politique de sécurité de type "Whitelisting" :
 
 Fermeture de tous les ports par défaut (Default Deny).
@@ -53,8 +51,7 @@ Ouverture exclusive du port 2222/tcp pour l'administration distante.
 
 Vérification systématique via la commande sudo ufw status verbose.
 
-3. Système de Prévention d'Intrusion (Fail2ban)
-
+Système de Prévention d'Intrusion (Fail2ban)
 Installation et configuration de Fail2ban pour surveiller les logs d'authentification :
 
 Analyse en temps réel de /var/log/auth.log.
@@ -63,7 +60,7 @@ Bannissement automatique des adresses IP après 3 tentatives de connexion infruc
 
 Configuration d'une "jail" spécifique pour le port SSH personnalisé.
 
- Script d'Audit Python (audit_ssh.py)
+Script d'Audit Python (audit_ssh.py)
 
 Nous avons développé un script Python permettant de vérifier l'état de sécurité du serveur sans intervention manuelle.
 
@@ -79,8 +76,7 @@ Exécution :
 
 sudo python3 audit_ssh.py
 
-
- Conformité RGPD & Analyse de Risques
+Conformité RGPD & Analyse de Risques
 
 Le projet intègre nativement les principes de Privacy by Design :
 
@@ -90,7 +86,7 @@ Traçabilité : Conservation et protection des logs d'accès pour répondre à l
 
 Analyse des Menaces : Réduction de la probabilité des risques de force brute (de "Haute" à "Faible") grâce au couplage Port Custom + Fail2ban.
 
- Équipe De Projet
+Équipe De Projet
 
 Yaya : Administrateur Système & Sécurité (Déploiement VM, Hardening SSH, Script Python).
 
