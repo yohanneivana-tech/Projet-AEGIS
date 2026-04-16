@@ -9,7 +9,7 @@ Présentation du Projet
 
 À la suite d'une compromission majeure du système d'information de TechSud, notre équipe a été mandatée pour :
 
-Auditer l'existant : Identifier les Vecteurs d'attaque utilisés.
+Auditer l'existant : Identifier les Vecteurs d'attaque Utilisés.
 
 Sécuriser l'hôte : Appliquer des mesures de durcissement (Hardening) sur une VM Linux.
 
